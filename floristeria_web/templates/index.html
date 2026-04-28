@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Floristería</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>🌻 Sistema Floristería 🌹</h1>
+
+        <section class="tarjeta">
+            <h2>Agregar producto</h2>
+
+            <input type="text" id="nombreProducto" placeholder="Nombre del producto">
+            <input type="number" id="precioProducto" placeholder="Precio">
+
+            <button onclick="agregarProducto()">Guardar producto</button>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Productos guardados</h2>
+
+            <button onclick="cargarProductos()">Actualizar lista</button>
+
+            <div id="listaProductos"></div>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Cambiar precio</h2>
+
+            <input type="text" id="productoCambiar" placeholder="Nombre del producto">
+            <input type="number" id="nuevoPrecio" placeholder="Nuevo precio">
+
+            <button onclick="cambiarPrecio()">Cambiar precio</button>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Eliminar producto</h2>
+
+            <input type="text" id="productoEliminar" placeholder="Nombre del producto">
+
+            <button class="rojo" onclick="eliminarProducto()">Eliminar</button>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Crear ramo</h2>
+
+            <select id="productoRamo"></select>
+            <input type="number" id="cantidadRamo" placeholder="Cantidad">
+
+            <button onclick="agregarAlRamo()">Agregar al ramo</button>
+
+            <div id="detalleRamo"></div>
+
+            <h2 id="totalRamo">Total: $0.00</h2>
+
+            <button class="rojo" onclick="limpiarRamo()">Nuevo ramo</button>
+        </section>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
